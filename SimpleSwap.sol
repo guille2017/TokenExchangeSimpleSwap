@@ -24,7 +24,7 @@ contract SimpleSwap is TokenExchange {
     event LiquidityRemoved(address indexed provider, uint256 amountA, uint256 amountB);
     event Swap(address indexed sender, address indexed recipient, uint256 amountIn, uint256 amountOut);
 
-    constructor() TokenFactory("LiquidityPair", "LP") {
+    constructor() TokenExchange("LiquidityPair", "LP") {
         mint(address(this),MINIMUN_LIQUIDITY);
     }
 
